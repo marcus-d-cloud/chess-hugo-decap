@@ -1,6 +1,6 @@
 ---
 title: "Beispielveranstaltung morgen"
-date: 2026-03-16
+date: 2026-03-15
 draft: false
 ---
 

@@ -1,0 +1,10 @@
+/* Custom layout overrides for full-width content */
+.main {
+  max-width: none;
+  width: 80%;
+}
+
+.container {
+  max-width: none;
+  width: 80%;
+}

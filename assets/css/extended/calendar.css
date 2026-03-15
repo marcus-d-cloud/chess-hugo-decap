@@ -3,8 +3,18 @@
   margin-bottom: 2rem;
 }
 
+.month-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .calendar-wrapper {
-  display: block;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.85rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -12,10 +22,10 @@
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 0.35rem;
-  background: white;
-  border: 1px solid #e0e0e0;
+  background: transparent;
+  border: none;
   border-radius: 0.85rem;
-  padding: 1rem;
+  padding: 0;
 }
 
 .calendar-header {
@@ -44,18 +54,27 @@
 }
 
 .calendar-cell.today {
-  border-color: var(--pm-accent);
-  box-shadow: 0 0 0 1px var(--pm-accent);
+  border-color: #007acc !important;
+  box-shadow: 0 0 0 2px #007acc !important;
+  background: #e6f3ff !important;
 }
 
 .calendar-cell.has-events {
-  border-color: var(--pm-accent-muted);
+  border-color: #28a745 !important;
+  background: #f0f9f0 !important;
+}
+
+.calendar-cell.today.has-events {
+  background: #e6f3ff !important;
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 2px #007acc !important;
 }
 
 .calendar-day {
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
+  text-align: center;
 }
 
 .calendar-events {
@@ -108,11 +127,11 @@
 }
 
 .calendar-legend .dot.today {
-  background: var(--pm-accent);
+  background: #007acc;
 }
 
 .calendar-legend .dot.has-events {
-  background: var(--pm-accent-muted);
+  background: #28a745;
 }
 
 .event-lists {

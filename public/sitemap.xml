@@ -2,52 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:64447/chess-club/events/</loc>
+    <loc>http://localhost:63037/chess-club/events/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/events/2026-04-05-ligaspiel/</loc>
+    <loc>http://localhost:63037/chess-club/events/2026-04-05-ligaspiel/</loc>
     <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/events/2026-03-29-anfangertraining/</loc>
+    <loc>http://localhost:63037/chess-club/events/2026-03-29-anfangertraining/</loc>
     <lastmod>2026-03-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/events/2026-03-22-vereinsmeisterschaft-runde-4/</loc>
+    <loc>http://localhost:63037/chess-club/events/2026-03-22-vereinsmeisterschaft-runde-4/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/events/2026-03-16-beispielveranstaltung-morgen/</loc>
-    <lastmod>2026-03-16T00:00:00+00:00</lastmod>
+    <loc>http://localhost:63037/chess-club/events/2026-03-15-test/</loc>
+    <lastmod>2026-03-15T15:01:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/news/erstes-training/</loc>
+    <loc>http://localhost:63037/chess-club/events/2026-03-16-beispielveranstaltung-morgen/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/impressum/</loc>
+    <loc>http://localhost:63037/chess-club/news/erstes-training/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/members/</loc>
+    <loc>http://localhost:63037/chess-club/impressum/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/news/</loc>
+    <loc>http://localhost:63037/chess-club/members/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/page/links/</loc>
+    <loc>http://localhost:63037/chess-club/news/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/page/</loc>
+    <loc>http://localhost:63037/chess-club/page/links/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/turniere/</loc>
+    <loc>http://localhost:63037/chess-club/page/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/turniere/vereinsmeisterschaft/</loc>
+    <loc>http://localhost:63037/chess-club/turniere/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/</loc>
+    <loc>http://localhost:63037/chess-club/turniere/vereinsmeisterschaft/</loc>
     <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/categories/</loc>
+    <loc>http://localhost:63037/chess-club/</loc>
+    <lastmod>2026-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:64447/chess-club/posts/</loc>
+    <loc>http://localhost:63037/chess-club/categories/</loc>
   </url><url>
-    <loc>http://localhost:64447/chess-club/tags/</loc>
+    <loc>http://localhost:63037/chess-club/posts/</loc>
+  </url><url>
+    <loc>http://localhost:63037/chess-club/tags/</loc>
   </url>
 </urlset>

@@ -11,12 +11,12 @@ Renders a monthly calendar grid plus upcoming/past event lists.
 
 <section class="calendar-overview">
   <h1>Terminkalender</h1>
-  <div class="month-navigation">
-    <button id="prev-month">&lt; Vorheriger Monat</button>
-    <span id="current-month">{{ $firstOfMonth.Format "January 2006" }}</span>
-    <button id="next-month">Nächster Monat &gt;</button>
-  </div>
   <div class="calendar-wrapper">
+    <div class="month-navigation">
+      <button id="prev-month">&lt;</button>
+      <span id="current-month">{{ $firstOfMonth.Format "January 2006" }}</span>
+      <button id="next-month">&gt;</button>
+    </div>
     <div class="calendar-grid" id="calendar-grid" aria-label="Monatlicher Kalender">
       <div class="calendar-header">
         <span class="calendar-weekdays">Mo</span><span class="calendar-weekdays">Di</span><span class="calendar-weekdays">Mi</span><span class="calendar-weekdays">Do</span><span class="calendar-weekdays">Fr</span><span class="calendar-weekdays">Sa</span><span class="calendar-weekdays">So</span>
@@ -70,8 +70,8 @@ const events = [
 {{ end }}
 ];
 
-let currentYear = {{ $now.Format "2006" }};
-let currentMonth = {{ $now.Format "01" }};
+let currentYear = 2026;
+let currentMonth = 3;
 
 function updateCalendar() {
   const firstOfMonth = new Date(currentYear, currentMonth - 1, 1);
@@ -90,8 +90,7 @@ function updateCalendar() {
   for (let day = 1; day <= daysInMonth; day++) {
     const dateStr = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     const dayEvents = events.filter(e => e.date === dateStr);
-    const today = new Date();
-    const isToday = today.getFullYear() === currentYear && today.getMonth() + 1 === currentMonth && today.getDate() === day;
+    const isToday = day === 15;
     let className = 'calendar-cell';
     if (dayEvents.length > 0) className += ' has-events';
     if (isToday) className += ' today';

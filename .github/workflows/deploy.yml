@@ -1,0 +1,128 @@
+name: Build and Deploy Hugo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: "Override deploy target"
+        required: false
+        default: ""
+        type: choice
+        options:
+          - ""
+          - pages
+          - sftp
+
+concurrency:
+  group: deploy-hugo
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.150.0"
+          extended: true
+
+      - name: Resolve deploy target
+        id: target
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.deploy_target }}" ]; then
+            echo "value=${{ inputs.deploy_target }}" >> "$GITHUB_OUTPUT"
+          elif [ -n "${{ vars.DEPLOY_TARGET }}" ]; then
+            echo "value=${{ vars.DEPLOY_TARGET }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=pages" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate deploy target
+        shell: bash
+        run: |
+          case "${{ steps.target.outputs.value }}" in
+            pages|sftp) ;;
+            *)
+              echo "Invalid deploy target: '${{ steps.target.outputs.value }}'"
+              echo "Allowed values: pages, sftp"
+              exit 1
+              ;;
+          esac
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Validate Pages configuration
+        if: steps.target.outputs.value == 'pages'
+        shell: bash
+        run: |
+          if [ -z "${{ vars.PAGES_REPOSITORY }}" ]; then
+            echo "Missing repo variable: PAGES_REPOSITORY (example: my-org/my-pages-repo)"
+            exit 1
+          fi
+
+      - name: Deploy to Pages repository
+        if: steps.target.outputs.value == 'pages'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.PAGES_DEPLOY_PAT }}
+          external_repository: ${{ vars.PAGES_REPOSITORY }}
+          publish_branch: ${{ vars.PAGES_BRANCH || 'main' }}
+          publish_dir: ./public
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Validate SFTP configuration
+        if: steps.target.outputs.value == 'sftp'
+        shell: bash
+        run: |
+          missing=0
+          for v in DEPLOY_HOST DEPLOY_USER DEPLOY_PATH; do
+            if [ -z "${!v}" ]; then
+              echo "Missing secret: $v"
+              missing=1
+            fi
+          done
+          if [ -z "$DEPLOY_SSH_KEY" ]; then
+            echo "Missing secret: DEPLOY_SSH_KEY"
+            missing=1
+          fi
+          if [ "$missing" -ne 0 ]; then
+            exit 1
+          fi
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Deploy to SFTP (rsync over SSH)
+        if: steps.target.outputs.value == 'sftp'
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          printf "%s" "$DEPLOY_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            ./public/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}

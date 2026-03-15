@@ -1,0 +1,297 @@
+{{ define "main" }}
+<div id="calendar"></div>
+
+<style>
+    #calendar {
+        width: min(96vw, 1400px);
+        max-width: 1400px;
+        margin: 40px auto;
+        min-height: 600px;
+        height: auto;
+        overflow: visible;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #dbe3ee;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        font-family: "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
+    }
+
+    #calendar .vanilla-calendar__shell {
+        margin-bottom: 18px;
+    }
+
+    #calendar .vanilla-calendar__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    #calendar .vanilla-calendar__title {
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: #0f172a;
+    }
+
+    #calendar .vanilla-calendar__arrow {
+        border: 1px solid #c8d3e1;
+        background: #ffffff;
+        color: #0f172a;
+        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    #calendar .vanilla-calendar__arrow:hover {
+        transform: translateY(-1px);
+        border-color: #94a3b8;
+        box-shadow: 0 8px 18px rgba(30, 41, 59, 0.12);
+    }
+
+    #calendar .vanilla-calendar__week,
+    #calendar .vanilla-calendar__days {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    #calendar .vanilla-calendar__week {
+        margin-bottom: 10px;
+        color: #64748b;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    #calendar .vanilla-calendar__day {
+        min-height: 92px;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #0f172a;
+        padding: 8px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+    }
+
+    #calendar .vanilla-calendar__day:hover {
+        transform: translateY(-1px);
+        border-color: #bfd0e5;
+        box-shadow: 0 10px 20px rgba(30, 41, 59, 0.08);
+    }
+
+    #calendar .vanilla-calendar__day--empty {
+        min-height: 92px;
+        border: 1px dashed #e2e8f0;
+        background: transparent;
+        cursor: default;
+        box-shadow: none;
+    }
+
+    #calendar .vanilla-calendar__day-number {
+        font-weight: 700;
+        font-size: 0.95rem;
+        line-height: 1;
+    }
+
+    #calendar .vanilla-calendar__day--today {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 1px #2563eb inset, 0 8px 16px rgba(37, 99, 235, 0.16);
+    }
+
+    #calendar .vanilla-calendar__day--event {
+        background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+        border-color: #b6cff4;
+    }
+
+    #calendar .vanilla-calendar__day--selected {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a inset;
+    }
+
+    #calendar .vanilla-calendar__event-badge {
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+        padding: 0 8px;
+        border-radius: 999px;
+        background: #0f172a;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    #calendar .vanilla-calendar__event-preview {
+        display: grid;
+        gap: 4px;
+    }
+
+    #calendar .vanilla-calendar__event-line {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.74rem;
+        color: #334155;
+    }
+
+    #calendar .vanilla-calendar__details {
+        border-top: 1px solid #dbe3ee;
+        padding-top: 16px;
+    }
+
+    #calendar .vanilla-calendar__details-title {
+        margin: 0 0 12px;
+        font-size: 1.05rem;
+        color: #0f172a;
+        text-transform: capitalize;
+    }
+
+    #calendar .vanilla-calendar__details-empty {
+        margin: 0;
+        color: #64748b;
+    }
+
+    #calendar .vanilla-calendar__details-list {
+        display: grid;
+        gap: 10px;
+    }
+
+    #calendar .vanilla-calendar__event-card {
+        border: 1px solid #d7e3f3;
+        border-radius: 12px;
+        background: #f8fbff;
+        padding: 12px;
+    }
+
+    #calendar .vanilla-calendar__event-title {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #0f172a;
+    }
+
+    #calendar .vanilla-calendar__event-time {
+        margin: 6px 0 0;
+        font-size: 0.8rem;
+        color: #475569;
+    }
+
+    #calendar .vanilla-calendar__event-link {
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #1d4ed8;
+        text-decoration: none;
+    }
+
+    #calendar .vanilla-calendar__event-link:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+        #calendar {
+            margin: 20px auto;
+            padding: 12px;
+            border-radius: 14px;
+            width: min(98vw, 98vw);
+        }
+
+        #calendar .vanilla-calendar__day,
+        #calendar .vanilla-calendar__day--empty {
+            min-height: 72px;
+            padding: 6px;
+        }
+
+        #calendar .vanilla-calendar__event-line {
+            display: none;
+        }
+    }
+</style>
+
+{{ $vanillaCalendarJs := resources.Get "js/vanilla-calendar.js" | minify | fingerprint }}
+<script src="{{ $vanillaCalendarJs.RelPermalink }}"></script>
+<script>
+{{- $events := where .Site.RegularPages "Section" "calendar" -}}
+{{- $events = sort $events "Date" "asc" -}}
+{{- $compiledEvents := slice -}}
+{{- range $event := $events -}}
+    {{- $compiledEvents = $compiledEvents | append (dict
+            "date" ($event.Date.Format "2006-01-02")
+            "title" $event.Title
+            "url" $event.RelPermalink
+            "start" ($event.Date.Format "2006-01-02T15:04:05Z07:00")
+        ) -}}
+{{- end -}}
+var serverEvents = {{ $compiledEvents | jsonify | safeJS }};
+
+function initCalendar() {
+    console.info('[calendar] initCalendar started');
+    var calendarEl = document.getElementById('calendar');
+    if (!calendarEl) {
+        console.error('[calendar] #calendar element not found');
+        return;
+    }
+
+    console.info('[calendar] container found', {
+        width: calendarEl.clientWidth,
+        height: calendarEl.clientHeight
+    });
+
+    if (typeof VanillaCalendar === 'undefined') {
+        console.error('[calendar] VanillaCalendar global is missing', {
+            vanillaCalendarType: typeof VanillaCalendar
+        });
+        calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (VanillaCalendar nicht verfuegbar).</p>';
+        return;
+    }
+
+    console.info('[calendar] VanillaCalendar detected', {
+        hasCtor: Boolean(VanillaCalendar),
+        serverEventCount: serverEvents.length
+    });
+
+    try {
+        new VanillaCalendar(calendarEl, {
+            date: new Date(),
+            events: serverEvents
+        });
+
+        var vanillaRoot = calendarEl.querySelector('.vanilla-calendar__days');
+        var rect = calendarEl.getBoundingClientRect();
+        console.info('[calendar] render completed', {
+            hasVanillaRoot: Boolean(vanillaRoot),
+            containerRect: {
+                width: rect.width,
+                height: rect.height
+            },
+            childCount: calendarEl.children.length
+        });
+    } catch (error) {
+        console.error('[calendar] render failed', error);
+        calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (Fehler in der Datenquelle).</p>';
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCalendar);
+} else {
+    initCalendar();
+}
+</script>
+{{ end }}

@@ -1,0 +1,12 @@
+{{- $events := where .Site.RegularPages "Section" "calendar" -}}
+{{- $events = sort $events "Date" "asc" -}}
+[
+{{- range $index, $event := $events -}}
+  {{- $item := dict "title" $event.Title "start" ($event.Date.Format "2006-01-02T15:04:05Z07:00") "url" $event.RelPermalink -}}
+  {{- with $event.Params.end -}}
+    {{- $item = merge $item (dict "end" ((time .).Format "2006-01-02T15:04:05Z07:00")) -}}
+  {{- end -}}
+  {{- if $index }},{{ end }}
+  {{- $item | jsonify -}}
+{{- end -}}
+]

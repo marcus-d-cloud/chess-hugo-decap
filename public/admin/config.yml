@@ -20,11 +20,12 @@ collections:
 
   - name: "events"
     label: "Veranstaltungen"
-    folder: "content/events"
+    folder: "content/calendar"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Enddatum", name: "end", widget: "datetime", required: false}
       - {label: "Inhalt", name: "body", widget: "markdown"}

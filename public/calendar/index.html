@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/chess-club/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=chess-club/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Kalender | Schachclub Musterstadt</title>
+<meta name="keywords" content="">
+<meta name="description" content="Terminkalender aller Veranstaltungen">
+<meta name="author" content="Schachclub Musterstadt">
+<link rel="canonical" href="http://localhost:1313/chess-club/calendar/">
+<link crossorigin="anonymous" href="/chess-club/assets/css/stylesheet.a9c097078797df097064da12d4061e1f2eec18c5863e1ec269aba79ee19b4142.css" integrity="sha256-qcCXB4eX3wlwZNoS1AYeHy7sGMWGPh7CaaunnuGbQUI=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/chess-club/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/chess-club/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/chess-club/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/chess-club/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/chess-club/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/json" href="http://localhost:1313/chess-club/calendar/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/chess-club/calendar/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/chess-club/" accesskey="h" title="Schachclub Musterstadt (Alt + H)">Schachclub Musterstadt</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/chess-club/" title="Startseite">
+                    <span>Startseite</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/chess-club/news" title="News">
+                    <span>News</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/chess-club/turniere" title="Turniere">
+                    <span>Turniere</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/chess-club/calendar" title="Kalender">
+                    <span class="active">Kalender</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/chess-club/page/links" title="Links">
+                    <span>Links</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/chess-club/members" title="Mitglieder">
+                    <span>Mitglieder</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/chess-club/impressum" title="Impressum">
+                    <span>Impressum</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<div id="calendar"></div>
+
+<style>
+    #calendar {
+        width: min(96vw, 1400px);
+        max-width: 1400px;
+        margin: 40px auto;
+        min-height: 600px;
+        height: auto;
+        overflow: visible;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #dbe3ee;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        font-family: "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
+    }
+
+    #calendar .vanilla-calendar__shell {
+        margin-bottom: 18px;
+    }
+
+    #calendar .vanilla-calendar__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    #calendar .vanilla-calendar__title {
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: #0f172a;
+    }
+
+    #calendar .vanilla-calendar__arrow {
+        border: 1px solid #c8d3e1;
+        background: #ffffff;
+        color: #0f172a;
+        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    #calendar .vanilla-calendar__arrow:hover {
+        transform: translateY(-1px);
+        border-color: #94a3b8;
+        box-shadow: 0 8px 18px rgba(30, 41, 59, 0.12);
+    }
+
+    #calendar .vanilla-calendar__week,
+    #calendar .vanilla-calendar__days {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    #calendar .vanilla-calendar__week {
+        margin-bottom: 10px;
+        color: #64748b;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    #calendar .vanilla-calendar__day {
+        min-height: 92px;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #0f172a;
+        padding: 8px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+    }
+
+    #calendar .vanilla-calendar__day:hover {
+        transform: translateY(-1px);
+        border-color: #bfd0e5;
+        box-shadow: 0 10px 20px rgba(30, 41, 59, 0.08);
+    }
+
+    #calendar .vanilla-calendar__day--empty {
+        min-height: 92px;
+        border: 1px dashed #e2e8f0;
+        background: transparent;
+        cursor: default;
+        box-shadow: none;
+    }
+
+    #calendar .vanilla-calendar__day-number {
+        font-weight: 700;
+        font-size: 0.95rem;
+        line-height: 1;
+    }
+
+    #calendar .vanilla-calendar__day--today {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 1px #2563eb inset, 0 8px 16px rgba(37, 99, 235, 0.16);
+    }
+
+    #calendar .vanilla-calendar__day--event {
+        background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+        border-color: #b6cff4;
+    }
+
+    #calendar .vanilla-calendar__day--selected {
+        border-color: #0f172a;
+        box-shadow: 0 0 0 1px #0f172a inset;
+    }
+
+    #calendar .vanilla-calendar__event-badge {
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+        padding: 0 8px;
+        border-radius: 999px;
+        background: #0f172a;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+
+    #calendar .vanilla-calendar__event-preview {
+        display: grid;
+        gap: 4px;
+    }
+
+    #calendar .vanilla-calendar__event-line {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.74rem;
+        color: #334155;
+    }
+
+    #calendar .vanilla-calendar__details {
+        border-top: 1px solid #dbe3ee;
+        padding-top: 16px;
+    }
+
+    #calendar .vanilla-calendar__details-title {
+        margin: 0 0 12px;
+        font-size: 1.05rem;
+        color: #0f172a;
+        text-transform: capitalize;
+    }
+
+    #calendar .vanilla-calendar__details-empty {
+        margin: 0;
+        color: #64748b;
+    }
+
+    #calendar .vanilla-calendar__details-list {
+        display: grid;
+        gap: 10px;
+    }
+
+    #calendar .vanilla-calendar__event-card {
+        border: 1px solid #d7e3f3;
+        border-radius: 12px;
+        background: #f8fbff;
+        padding: 12px;
+    }
+
+    #calendar .vanilla-calendar__event-title {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #0f172a;
+    }
+
+    #calendar .vanilla-calendar__event-time {
+        margin: 6px 0 0;
+        font-size: 0.8rem;
+        color: #475569;
+    }
+
+    #calendar .vanilla-calendar__event-link {
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #1d4ed8;
+        text-decoration: none;
+    }
+
+    #calendar .vanilla-calendar__event-link:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+        #calendar {
+            margin: 20px auto;
+            padding: 12px;
+            border-radius: 14px;
+            width: min(98vw, 98vw);
+        }
+
+        #calendar .vanilla-calendar__day,
+        #calendar .vanilla-calendar__day--empty {
+            min-height: 72px;
+            padding: 6px;
+        }
+
+        #calendar .vanilla-calendar__event-line {
+            display: none;
+        }
+    }
+</style>
+
+
+<script src="/chess-club/js/vanilla-calendar.min.3f6d8a778b2f32a4aa10befab91a44bba6f30891ba5cd58062ff38aae00c9d21.js"></script>
+<script>var serverEvents = [{"date":"2026-03-15","start":"2026-03-15T00:00:00Z","title":"Beispielveranstaltung morgen","url":"/chess-club/calendar/2026-03-16-beispielveranstaltung-morgen/"},{"date":"2026-03-15","start":"2026-03-15T15:01:00+01:00","title":"Test","url":"/chess-club/calendar/2026-03-15-test/"},{"date":"2026-03-22","start":"2026-03-22T00:00:00Z","title":"Vereinsmeisterschaft Runde 4","url":"/chess-club/calendar/2026-03-22-vereinsmeisterschaft-runde-4/"},{"date":"2026-03-29","start":"2026-03-29T00:00:00Z","title":"Training für Anfänger","url":"/chess-club/calendar/2026-03-29-anfangertraining/"},{"date":"2026-04-05","start":"2026-04-05T00:00:00Z","title":"Ligaspiel gegen Nachbarstadt","url":"/chess-club/calendar/2026-04-05-ligaspiel/"}];
+
+function initCalendar() {
+    console.info('[calendar] initCalendar started');
+    var calendarEl = document.getElementById('calendar');
+    if (!calendarEl) {
+        console.error('[calendar] #calendar element not found');
+        return;
+    }
+
+    console.info('[calendar] container found', {
+        width: calendarEl.clientWidth,
+        height: calendarEl.clientHeight
+    });
+
+    if (typeof VanillaCalendar === 'undefined') {
+        console.error('[calendar] VanillaCalendar global is missing', {
+            vanillaCalendarType: typeof VanillaCalendar
+        });
+        calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (VanillaCalendar nicht verfuegbar).</p>';
+        return;
+    }
+
+    console.info('[calendar] VanillaCalendar detected', {
+        hasCtor: Boolean(VanillaCalendar),
+        serverEventCount: serverEvents.length
+    });
+
+    try {
+        new VanillaCalendar(calendarEl, {
+            date: new Date(),
+            events: serverEvents
+        });
+
+        var vanillaRoot = calendarEl.querySelector('.vanilla-calendar__days');
+        var rect = calendarEl.getBoundingClientRect();
+        console.info('[calendar] render completed', {
+            hasVanillaRoot: Boolean(vanillaRoot),
+            containerRect: {
+                width: rect.width,
+                height: rect.height
+            },
+            childCount: calendarEl.children.length
+        });
+    } catch (error) {
+        console.error('[calendar] render failed', error);
+        calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (Fehler in der Datenquelle).</p>';
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCalendar);
+} else {
+    initCalendar();
+}
+</script>
+
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/chess-club/">Schachclub Musterstadt</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

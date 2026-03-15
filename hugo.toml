@@ -36,8 +36,8 @@ buildFuture = true
 
   [[menu.main]]
     identifier = "calendar"
-    name = "Termine"
-    url = "/events"
+    name = "Kalender"
+    url = "/calendar"
     weight = 40
 
   [[menu.main]]

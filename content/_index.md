@@ -17,7 +17,7 @@ Herzlich willkommen auf der Website unseres Schachclubs! Wir sind eine lebendige
 
 ## Nächste Termine
 
-Schauen Sie in unseren [Terminkalender]({{< ref "/events" >}}) für bevorstehende Events und Spiele.
+Schauen Sie in unseren [Terminkalender]({{< ref "/calendar" >}}) für bevorstehende Events und Spiele.
 
 ## Kontakt
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Turnieres on Schachclub Musterstadt</title>
-    <link>http://localhost:56612/chess-club/turniere/</link>
+    <link>https://username.github.io/chess-club/turniere/</link>
     <description>Recent content in Turnieres on Schachclub Musterstadt</description>
     <generator>Hugo</generator>
     <language>de-de</language>
     <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:56612/chess-club/turniere/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://username.github.io/chess-club/turniere/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vereinsmeisterschaft 2026</title>
-      <link>http://localhost:56612/chess-club/turniere/vereinsmeisterschaft/</link>
+      <link>https://username.github.io/chess-club/turniere/vereinsmeisterschaft/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:56612/chess-club/turniere/vereinsmeisterschaft/</guid>
+      <guid>https://username.github.io/chess-club/turniere/vereinsmeisterschaft/</guid>
       <description>&lt;h1 id=&#34;vereinsmeisterschaft-2026&#34;&gt;Vereinsmeisterschaft 2026&lt;/h1&gt;
 &lt;p&gt;Die diesjährige Vereinsmeisterschaft ist in vollem Gange! Hier finden Sie alle Informationen zu den aktuellen Ergebnissen und dem Turnierverlauf.&lt;/p&gt;
 &lt;h2 id=&#34;aktuelle-tabelle&#34;&gt;Aktuelle Tabelle&lt;/h2&gt;

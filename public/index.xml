@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Willkommen beim Schachclub Musterstadt on Schachclub Musterstadt</title>
-    <link>https://username.github.io/chess-club/</link>
+    <link>http://localhost:1313/chess-club/</link>
     <description>Recent content in Willkommen beim Schachclub Musterstadt on Schachclub Musterstadt</description>
     <generator>Hugo</generator>
     <language>de-de</language>
     <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://username.github.io/chess-club/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/chess-club/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ligaspiel gegen Nachbarstadt</title>
-      <link>https://username.github.io/chess-club/calendar/2026-04-05-ligaspiel/</link>
+      <link>http://localhost:1313/chess-club/calendar/2026-04-05-ligaspiel/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/calendar/2026-04-05-ligaspiel/</guid>
+      <guid>http://localhost:1313/chess-club/calendar/2026-04-05-ligaspiel/</guid>
       <description>&lt;h2 id=&#34;ligaspiel-gegen-schachclub-nachbarstadt&#34;&gt;Ligaspiel gegen Schachclub Nachbarstadt&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Nachbarstadt&lt;br&gt;
 &lt;strong&gt;Adresse:&lt;/strong&gt; Schachstraße 12, 12345 Nachbarstadt&lt;/p&gt;
@@ -21,9 +21,9 @@
     </item>
     <item>
       <title>Training für Anfänger</title>
-      <link>https://username.github.io/chess-club/calendar/2026-03-29-anfangertraining/</link>
+      <link>http://localhost:1313/chess-club/calendar/2026-03-29-anfangertraining/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/calendar/2026-03-29-anfangertraining/</guid>
+      <guid>http://localhost:1313/chess-club/calendar/2026-03-29-anfangertraining/</guid>
       <description>&lt;h2 id=&#34;training-für-anfänger&#34;&gt;Training für Anfänger&lt;/h2&gt;
 &lt;p&gt;Für alle, die neu im Schach sind oder ihre Grundlagen auffrischen möchten.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;br&gt;
@@ -32,9 +32,9 @@
     </item>
     <item>
       <title>Vereinsmeisterschaft Runde 4</title>
-      <link>https://username.github.io/chess-club/calendar/2026-03-22-vereinsmeisterschaft-runde-4/</link>
+      <link>http://localhost:1313/chess-club/calendar/2026-03-22-vereinsmeisterschaft-runde-4/</link>
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/calendar/2026-03-22-vereinsmeisterschaft-runde-4/</guid>
+      <guid>http://localhost:1313/chess-club/calendar/2026-03-22-vereinsmeisterschaft-runde-4/</guid>
       <description>&lt;h2 id=&#34;vereinsmeisterschaft-runde-4&#34;&gt;Vereinsmeisterschaft Runde 4&lt;/h2&gt;
 &lt;p&gt;Die vierte Runde der Vereinsmeisterschaft findet statt.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;br&gt;
@@ -43,16 +43,16 @@
     </item>
     <item>
       <title>Test</title>
-      <link>https://username.github.io/chess-club/calendar/2026-03-15-test/</link>
+      <link>http://localhost:1313/chess-club/calendar/2026-03-15-test/</link>
       <pubDate>Sun, 15 Mar 2026 15:01:00 +0100</pubDate>
-      <guid>https://username.github.io/chess-club/calendar/2026-03-15-test/</guid>
+      <guid>http://localhost:1313/chess-club/calendar/2026-03-15-test/</guid>
       <description>&lt;p&gt;adasdasd&lt;/p&gt;</description>
     </item>
     <item>
       <title>Beispielveranstaltung morgen</title>
-      <link>https://username.github.io/chess-club/calendar/2026-03-16-beispielveranstaltung-morgen/</link>
+      <link>http://localhost:1313/chess-club/calendar/2026-03-16-beispielveranstaltung-morgen/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/calendar/2026-03-16-beispielveranstaltung-morgen/</guid>
+      <guid>http://localhost:1313/chess-club/calendar/2026-03-16-beispielveranstaltung-morgen/</guid>
       <description>&lt;h2 id=&#34;beispielveranstaltung-für-morgen&#34;&gt;Beispielveranstaltung für morgen&lt;/h2&gt;
 &lt;p&gt;Dies ist ein Beispiel für eine Veranstaltung, die morgen stattfindet.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Datum:&lt;/strong&gt; 16. März 2026&lt;br&gt;
@@ -62,17 +62,17 @@
     </item>
     <item>
       <title>Erstes Training 2026</title>
-      <link>https://username.github.io/chess-club/news/erstes-training/</link>
+      <link>http://localhost:1313/chess-club/news/erstes-training/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/news/erstes-training/</guid>
+      <guid>http://localhost:1313/chess-club/news/erstes-training/</guid>
       <description>&lt;p&gt;Heute fand unser erstes Training im neuen Jahr statt.
 Viele spannende Partien!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Impressum</title>
-      <link>https://username.github.io/chess-club/impressum/</link>
+      <link>http://localhost:1313/chess-club/impressum/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/impressum/</guid>
+      <guid>http://localhost:1313/chess-club/impressum/</guid>
       <description>&lt;h1 id=&#34;impressum&#34;&gt;Impressum&lt;/h1&gt;
 &lt;h2 id=&#34;angaben-gemäß--5-tmg&#34;&gt;Angaben gemäß § 5 TMG&lt;/h2&gt;
 &lt;p&gt;Schachclub Musterstadt e.V.&lt;br&gt;
@@ -95,11 +95,10 @@ Registernummer: VR 12345&lt;/p&gt;
     </item>
     <item>
       <title>Nützliche Links</title>
-      <link>https://username.github.io/chess-club/page/links/</link>
+      <link>http://localhost:1313/chess-club/page/links/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/page/links/</guid>
-      <description>&lt;h1 id=&#34;nützliche-links&#34;&gt;Nützliche Links&lt;/h1&gt;
-&lt;p&gt;Hier finden Sie eine Sammlung von nützlichen Links für Schachspieler und Interessierte.&lt;/p&gt;
+      <guid>http://localhost:1313/chess-club/page/links/</guid>
+      <description>&lt;p&gt;Hier finden Sie eine Sammlung von nützlichen Links für Schachspieler und Interessierte.&lt;/p&gt;
 &lt;h2 id=&#34;deutsche-schachverbände&#34;&gt;Deutsche Schachverbände&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.schachbund.de&#34;&gt;Deutscher Schachbund (DSB)&lt;/a&gt;&lt;/li&gt;
@@ -125,9 +124,9 @@ Registernummer: VR 12345&lt;/p&gt;
     </item>
     <item>
       <title>Vereinsmeisterschaft 2026</title>
-      <link>https://username.github.io/chess-club/turniere/vereinsmeisterschaft/</link>
+      <link>http://localhost:1313/chess-club/turniere/vereinsmeisterschaft/</link>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://username.github.io/chess-club/turniere/vereinsmeisterschaft/</guid>
+      <guid>http://localhost:1313/chess-club/turniere/vereinsmeisterschaft/</guid>
       <description>&lt;h1 id=&#34;vereinsmeisterschaft-2026&#34;&gt;Vereinsmeisterschaft 2026&lt;/h1&gt;
 &lt;p&gt;Die diesjährige Vereinsmeisterschaft ist in vollem Gange! Hier finden Sie alle Informationen zu den aktuellen Ergebnissen und dem Turnierverlauf.&lt;/p&gt;
 &lt;h2 id=&#34;aktuelle-tabelle&#34;&gt;Aktuelle Tabelle&lt;/h2&gt;

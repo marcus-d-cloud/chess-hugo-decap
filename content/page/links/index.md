@@ -3,9 +3,6 @@ title: "Nützliche Links"
 date: 2026-03-15
 draft: false
 ---
-
-# Nützliche Links
-
 Hier finden Sie eine Sammlung von nützlichen Links für Schachspieler und Interessierte.
 
 ## Deutsche Schachverbände

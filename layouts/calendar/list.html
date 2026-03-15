@@ -9,8 +9,8 @@
         min-height: 600px;
         height: auto;
         overflow: visible;
-        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-        border: 1px solid #dbe3ee;
+        background: linear-gradient(180deg, #f5f9ff 0%, #edf4ff 100%);
+        border: 1px solid #ccdbef;
         border-radius: 16px;
         padding: 28px;
         box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
@@ -38,7 +38,7 @@
 
     #calendar .vanilla-calendar__arrow {
         border: 1px solid #c8d3e1;
-        background: #ffffff;
+        background: #f7faff;
         color: #0f172a;
         border-radius: 10px;
         width: 40px;
@@ -173,9 +173,9 @@
     }
 
     #calendar .vanilla-calendar__event-card {
-        border: 1px solid #d7e3f3;
+        border: 1px solid #ccdbef;
         border-radius: 12px;
-        background: #f8fbff;
+        background: #edf4ff;
         padding: 12px;
     }
 
@@ -227,19 +227,7 @@
 {{ $vanillaCalendarJs := resources.Get "js/vanilla-calendar.js" | minify | fingerprint }}
 <script src="{{ $vanillaCalendarJs.RelPermalink }}"></script>
 <script>
-{{- $events := where .Site.RegularPages "Section" "calendar" -}}
-{{- $events = sort $events "Date" "asc" -}}
-{{- $compiledEvents := slice -}}
-{{- range $event := $events -}}
-    {{- $compiledEvents = $compiledEvents | append (dict
-            "date" ($event.Date.Format "2006-01-02")
-            "title" $event.Title
-            "url" $event.RelPermalink
-            "start" ($event.Date.Format "2006-01-02T15:04:05Z07:00")
-        ) -}}
-{{- end -}}
-var serverEvents = {{ $compiledEvents | jsonify | safeJS }};
-
+{{ $eventsJsonURL := "calendar/index.json" | relURL }}
 function initCalendar() {
     console.info('[calendar] initCalendar started');
     var calendarEl = document.getElementById('calendar');
@@ -263,29 +251,58 @@ function initCalendar() {
 
     console.info('[calendar] VanillaCalendar detected', {
         hasCtor: Boolean(VanillaCalendar),
-        serverEventCount: serverEvents.length
+        eventsUrl: '{{ $eventsJsonURL }}'
     });
 
-    try {
-        new VanillaCalendar(calendarEl, {
-            date: new Date(),
-            events: serverEvents
-        });
+    fetch('{{ $eventsJsonURL }}')
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status + ' while loading event feed');
+            }
+            return response.json();
+        })
+        .then(function(content) {
+            var count = Array.isArray(content) ? content.length : null;
+            console.info('[calendar] event source loaded', { eventCount: count });
 
-        var vanillaRoot = calendarEl.querySelector('.vanilla-calendar__days');
-        var rect = calendarEl.getBoundingClientRect();
-        console.info('[calendar] render completed', {
-            hasVanillaRoot: Boolean(vanillaRoot),
-            containerRect: {
-                width: rect.width,
-                height: rect.height
-            },
-            childCount: calendarEl.children.length
+            var mappedEvents = (Array.isArray(content) ? content : []).map(function(item) {
+                var datePart = '';
+                if (item && item.start) {
+                    datePart = String(item.start).slice(0, 10);
+                }
+                return {
+                    date: datePart,
+                    title: item && item.title ? item.title : 'Termin',
+                    url: item && item.url ? item.url : null,
+                    start: item && item.start ? item.start : null
+                };
+            });
+
+            new VanillaCalendar(calendarEl, {
+                date: new Date(),
+                events: mappedEvents
+            });
+
+            // Upgrade click behavior: open URL if a day has exactly one event with URL.
+            calendarEl.addEventListener('click', function() {
+                // no-op hook kept for future diagnostics
+            });
+
+            var vanillaRoot = calendarEl.querySelector('.vanilla-calendar__days');
+            var rect = calendarEl.getBoundingClientRect();
+            console.info('[calendar] render completed', {
+                hasVanillaRoot: Boolean(vanillaRoot),
+                containerRect: {
+                    width: rect.width,
+                    height: rect.height
+                },
+                childCount: calendarEl.children.length
+            });
+        })
+        .catch(function(error) {
+            console.error('[calendar] render failed', error);
+            calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (Fehler in der Datenquelle).</p>';
         });
-    } catch (error) {
-        console.error('[calendar] render failed', error);
-        calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (Fehler in der Datenquelle).</p>';
-    }
 }
 
 if (document.readyState === 'loading') {

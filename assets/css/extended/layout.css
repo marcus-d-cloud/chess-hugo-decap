@@ -1,12 +1,85 @@
-/* Custom layout overrides for full-width content */
+/* Global visual refresh: consistent backdrop + clean content surfaces */
+:root {
+  --app-bg: #eef3f9;
+  --app-surface: #f4f8ff;
+  --app-surface-soft: #edf4ff;
+  --app-header-surface: #dce8f8;
+  --app-outline: #ccdbef;
+  --app-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+:root[data-theme="dark"] {
+  --app-bg: #171b22;
+  --app-surface: #1f2631;
+  --app-surface-soft: #232d3a;
+  --app-header-surface: #1a222d;
+  --app-outline: #2d3949;
+  --app-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+body,
+.list {
+  background:
+    radial-gradient(1200px 520px at 10% -8%, rgba(59, 130, 246, 0.12), transparent 60%),
+    radial-gradient(1000px 460px at 100% 0%, rgba(16, 185, 129, 0.1), transparent 62%),
+    var(--app-bg);
+}
+
 .main {
-  max-width: none;
-  width: 80%;
+  max-width: min(1600px, 94vw);
+  width: min(1600px, 94vw);
+  margin: 0 auto;
+  padding: clamp(18px, 2vw, 34px);
 }
 
 .container {
   max-width: none;
-  width: 80%;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  background: var(--app-header-surface);
+}
+
+.header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  max-width: min(1600px, 94vw);
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent 0%, var(--app-outline) 12%, var(--app-outline) 88%, transparent 100%);
+}
+
+.page-header,
+.post-content,
+.post-entry,
+.archive-year,
+.profile_inner,
+.first-entry {
+  background: var(--app-surface);
+  border: 1px solid var(--app-outline);
+  border-radius: 16px;
+  box-shadow: var(--app-shadow);
+}
+
+.page-header,
+.post-content,
+.archive-year,
+.profile_inner {
+  padding: clamp(14px, 1.8vw, 24px);
+}
+
+.post-entry,
+.first-entry {
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+
+.post-entry:hover,
+.first-entry:hover {
+  transform: translateY(-2px);
+  border-color: #b8c9df;
+  box-shadow: 0 22px 45px rgba(30, 41, 59, 0.12);
 }
 
 #calendar {
@@ -14,4 +87,30 @@
   margin: 40px auto;
   min-height: 600px;
   height: auto;
+}
+
+.page-header + .post-content {
+  margin-top: 14px;
+  position: relative;
+}
+
+.page-header + .post-content::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, transparent 0%, var(--app-outline) 12%, var(--app-outline) 88%, transparent 100%);
+}
+
+.post-single .post-header + .post-content {
+  margin-top: 14px;
+  position: relative;
+}
+
+.post-single .post-header + .post-content::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, transparent 0%, var(--app-outline) 12%, var(--app-outline) 88%, transparent 100%);
 }

@@ -11,6 +11,7 @@ buildFuture = true
   description = "Offizielle Website des Schachclubs Musterstadt"
   DateFormat = "2006-01-02"
   defaultTheme = "auto"
+  mainSections = []
 
   [params.profileMode]
     enabled = false
@@ -45,12 +46,6 @@ buildFuture = true
     name = "Links"
     url = "/page/links"
     weight = 50
-
-  [[menu.main]]
-    identifier = "members"
-    name = "Mitglieder"
-    url = "/members"
-    weight = 60
 
   [[menu.main]]
     identifier = "impressum"

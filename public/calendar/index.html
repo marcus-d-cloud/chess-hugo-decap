@@ -10,7 +10,7 @@
 <meta name="description" content="Terminkalender aller Veranstaltungen">
 <meta name="author" content="Schachclub Musterstadt">
 <link rel="canonical" href="http://localhost:1313/chess-club/calendar/">
-<link crossorigin="anonymous" href="/chess-club/assets/css/stylesheet.a9c097078797df097064da12d4061e1f2eec18c5863e1ec269aba79ee19b4142.css" integrity="sha256-qcCXB4eX3wlwZNoS1AYeHy7sGMWGPh7CaaunnuGbQUI=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/chess-club/assets/css/stylesheet.56200e0ee260c84d4c7d159abdc3b4fa667d2b4eb8d84113cbb775be0300d827.css" integrity="sha256-ViAODuJgyE1MfRWavcO0&#43;mZ9K0642EETy7d1vgMA2Cc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/chess-club/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/chess-club/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/chess-club/favicon-32x32.png">
@@ -128,11 +128,6 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/chess-club/members" title="Mitglieder">
-                    <span>Mitglieder</span>
-                </a>
-            </li>
-            <li>
                 <a href="http://localhost:1313/chess-club/impressum" title="Impressum">
                     <span>Impressum</span>
                 </a>
@@ -151,8 +146,8 @@
         min-height: 600px;
         height: auto;
         overflow: visible;
-        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-        border: 1px solid #dbe3ee;
+        background: linear-gradient(180deg, #f5f9ff 0%, #edf4ff 100%);
+        border: 1px solid #ccdbef;
         border-radius: 16px;
         padding: 28px;
         box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
@@ -180,7 +175,7 @@
 
     #calendar .vanilla-calendar__arrow {
         border: 1px solid #c8d3e1;
-        background: #ffffff;
+        background: #f7faff;
         color: #0f172a;
         border-radius: 10px;
         width: 40px;
@@ -315,9 +310,9 @@
     }
 
     #calendar .vanilla-calendar__event-card {
-        border: 1px solid #d7e3f3;
+        border: 1px solid #ccdbef;
         border-radius: 12px;
-        background: #f8fbff;
+        background: #edf4ff;
         padding: 12px;
     }
 
@@ -368,7 +363,7 @@
 
 
 <script src="/chess-club/js/vanilla-calendar.min.3f6d8a778b2f32a4aa10befab91a44bba6f30891ba5cd58062ff38aae00c9d21.js"></script>
-<script>var serverEvents = [{"date":"2026-03-15","start":"2026-03-15T00:00:00Z","title":"Beispielveranstaltung morgen","url":"/chess-club/calendar/2026-03-16-beispielveranstaltung-morgen/"},{"date":"2026-03-15","start":"2026-03-15T15:01:00+01:00","title":"Test","url":"/chess-club/calendar/2026-03-15-test/"},{"date":"2026-03-22","start":"2026-03-22T00:00:00Z","title":"Vereinsmeisterschaft Runde 4","url":"/chess-club/calendar/2026-03-22-vereinsmeisterschaft-runde-4/"},{"date":"2026-03-29","start":"2026-03-29T00:00:00Z","title":"Training für Anfänger","url":"/chess-club/calendar/2026-03-29-anfangertraining/"},{"date":"2026-04-05","start":"2026-04-05T00:00:00Z","title":"Ligaspiel gegen Nachbarstadt","url":"/chess-club/calendar/2026-04-05-ligaspiel/"}];
+<script>
 
 function initCalendar() {
     console.info('[calendar] initCalendar started');
@@ -393,29 +388,58 @@ function initCalendar() {
 
     console.info('[calendar] VanillaCalendar detected', {
         hasCtor: Boolean(VanillaCalendar),
-        serverEventCount: serverEvents.length
+        eventsUrl: '\/chess-club\/calendar\/index.json'
     });
 
-    try {
-        new VanillaCalendar(calendarEl, {
-            date: new Date(),
-            events: serverEvents
-        });
+    fetch('\/chess-club\/calendar\/index.json')
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status + ' while loading event feed');
+            }
+            return response.json();
+        })
+        .then(function(content) {
+            var count = Array.isArray(content) ? content.length : null;
+            console.info('[calendar] event source loaded', { eventCount: count });
 
-        var vanillaRoot = calendarEl.querySelector('.vanilla-calendar__days');
-        var rect = calendarEl.getBoundingClientRect();
-        console.info('[calendar] render completed', {
-            hasVanillaRoot: Boolean(vanillaRoot),
-            containerRect: {
-                width: rect.width,
-                height: rect.height
-            },
-            childCount: calendarEl.children.length
+            var mappedEvents = (Array.isArray(content) ? content : []).map(function(item) {
+                var datePart = '';
+                if (item && item.start) {
+                    datePart = String(item.start).slice(0, 10);
+                }
+                return {
+                    date: datePart,
+                    title: item && item.title ? item.title : 'Termin',
+                    url: item && item.url ? item.url : null,
+                    start: item && item.start ? item.start : null
+                };
+            });
+
+            new VanillaCalendar(calendarEl, {
+                date: new Date(),
+                events: mappedEvents
+            });
+
+            
+            calendarEl.addEventListener('click', function() {
+                
+            });
+
+            var vanillaRoot = calendarEl.querySelector('.vanilla-calendar__days');
+            var rect = calendarEl.getBoundingClientRect();
+            console.info('[calendar] render completed', {
+                hasVanillaRoot: Boolean(vanillaRoot),
+                containerRect: {
+                    width: rect.width,
+                    height: rect.height
+                },
+                childCount: calendarEl.children.length
+            });
+        })
+        .catch(function(error) {
+            console.error('[calendar] render failed', error);
+            calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (Fehler in der Datenquelle).</p>';
         });
-    } catch (error) {
-        console.error('[calendar] render failed', error);
-        calendarEl.innerHTML = '<p>Kalender konnte nicht geladen werden (Fehler in der Datenquelle).</p>';
-    }
 }
 
 if (document.readyState === 'loading') {

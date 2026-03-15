@@ -1,9 +1,184 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Schachclub Musterstadt</title>
-        <link>http://localhost:1313/</link>
-        <description>Recent content on Schachclub Musterstadt</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>de-de</language>
-        <lastBuildDate></lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Willkommen beim Schachclub Musterstadt on Schachclub Musterstadt</title>
+    <link>http://localhost:50767/</link>
+    <description>Recent content in Willkommen beim Schachclub Musterstadt on Schachclub Musterstadt</description>
+    <generator>Hugo</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:50767/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ligaspiel gegen Nachbarstadt</title>
+      <link>http://localhost:50767/events/2026-04-05-ligaspiel/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/events/2026-04-05-ligaspiel/</guid>
+      <description>&lt;h2 id=&#34;ligaspiel-gegen-schachclub-nachbarstadt&#34;&gt;Ligaspiel gegen Schachclub Nachbarstadt&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Nachbarstadt&lt;br&gt;
+&lt;strong&gt;Adresse:&lt;/strong&gt; Schachstraße 12, 12345 Nachbarstadt&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 19:30 Uhr&lt;/p&gt;
+&lt;p&gt;Wir freuen uns auf ein spannendes Match!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Training für Anfänger</title>
+      <link>http://localhost:50767/events/2026-03-29-anfangertraining/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/events/2026-03-29-anfangertraining/</guid>
+      <description>&lt;h2 id=&#34;training-für-anfänger&#34;&gt;Training für Anfänger&lt;/h2&gt;
+&lt;p&gt;Für alle, die neu im Schach sind oder ihre Grundlagen auffrischen möchten.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;br&gt;
+&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 18:00 Uhr&lt;/p&gt;
+&lt;p&gt;Bitte bringt ein eigenes Schachbrett mit, falls vorhanden.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vereinsmeisterschaft Runde 4</title>
+      <link>http://localhost:50767/events/2026-03-22-vereinsmeisterschaft-runde-4/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/events/2026-03-22-vereinsmeisterschaft-runde-4/</guid>
+      <description>&lt;h2 id=&#34;vereinsmeisterschaft-runde-4&#34;&gt;Vereinsmeisterschaft Runde 4&lt;/h2&gt;
+&lt;p&gt;Die vierte Runde der Vereinsmeisterschaft findet statt.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;br&gt;
+&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 19:00 Uhr&lt;/p&gt;
+&lt;p&gt;Viel Erfolg an alle Teilnehmer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beispielveranstaltung morgen</title>
+      <link>http://localhost:50767/events/2026-03-16-beispielveranstaltung-morgen/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/events/2026-03-16-beispielveranstaltung-morgen/</guid>
+      <description>&lt;h2 id=&#34;beispielveranstaltung-für-morgen&#34;&gt;Beispielveranstaltung für morgen&lt;/h2&gt;
+&lt;p&gt;Dies ist ein Beispiel für eine Veranstaltung, die morgen stattfindet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Datum:&lt;/strong&gt; 16. März 2026&lt;br&gt;
+&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 19:00 Uhr&lt;br&gt;
+&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;/p&gt;
+&lt;p&gt;Weitere Details folgen bald!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:50767/events/2026-03-15-test/</link>
+      <pubDate>Sun, 15 Mar 2026 15:01:00 +0100</pubDate>
+      <guid>http://localhost:50767/events/2026-03-15-test/</guid>
+      <description>&lt;p&gt;adasdasd&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Erstes Training 2026</title>
+      <link>http://localhost:50767/news/erstes-training/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/news/erstes-training/</guid>
+      <description>&lt;p&gt;Heute fand unser erstes Training im neuen Jahr statt.
+Viele spannende Partien!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Impressum</title>
+      <link>http://localhost:50767/impressum/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/impressum/</guid>
+      <description>&lt;h1 id=&#34;impressum&#34;&gt;Impressum&lt;/h1&gt;
+&lt;h2 id=&#34;angaben-gemäß--5-tmg&#34;&gt;Angaben gemäß § 5 TMG&lt;/h2&gt;
+&lt;p&gt;Schachclub Musterstadt e.V.&lt;br&gt;
+Musterstraße 12&lt;br&gt;
+12345 Musterstadt&lt;/p&gt;
+&lt;p&gt;Vertreten durch den Vorstand:&lt;br&gt;
+Max Mustermann (Vorsitzender)&lt;br&gt;
+Anna Beispiel (Kassenwart)&lt;/p&gt;
+&lt;h2 id=&#34;kontakt&#34;&gt;Kontakt&lt;/h2&gt;
+&lt;p&gt;Telefon: 0123 456789&lt;br&gt;
+E-Mail: &lt;a href=&#34;mailto:info@schachclub-musterstadt.de&#34;&gt;info@schachclub-musterstadt.de&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;registereintrag&#34;&gt;Registereintrag&lt;/h2&gt;
+&lt;p&gt;Eingetragen im Vereinsregister.&lt;br&gt;
+Registergericht: Amtsgericht Musterstadt&lt;br&gt;
+Registernummer: VR 12345&lt;/p&gt;
+&lt;h2 id=&#34;haftung-für-inhalte&#34;&gt;Haftung für Inhalte&lt;/h2&gt;
+&lt;p&gt;Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.&lt;/p&gt;
+&lt;h2 id=&#34;haftung-für-links&#34;&gt;Haftung für Links&lt;/h2&gt;
+&lt;p&gt;Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nützliche Links</title>
+      <link>http://localhost:50767/page/links/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/page/links/</guid>
+      <description>&lt;h1 id=&#34;nützliche-links&#34;&gt;Nützliche Links&lt;/h1&gt;
+&lt;p&gt;Hier finden Sie eine Sammlung von nützlichen Links für Schachspieler und Interessierte.&lt;/p&gt;
+&lt;h2 id=&#34;deutsche-schachverbände&#34;&gt;Deutsche Schachverbände&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachbund.de&#34;&gt;Deutscher Schachbund (DSB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachverband-niedersachsen.de&#34;&gt;Schachverband Niedersachsen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;online-schach&#34;&gt;Online-Schach&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.chess.com&#34;&gt;Chess.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lichess.org&#34;&gt;Lichess.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chess24.com&#34;&gt;Chess24&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;schachsoftware&#34;&gt;Schachsoftware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.chessbase.com&#34;&gt;ChessBase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stockfishchess.org&#34;&gt;Stockfish&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lokale-clubs&#34;&gt;Lokale Clubs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachclub-nachbarstadt.de&#34;&gt;Schachclub Nachbarstadt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachverein-beispielstadt.de&#34;&gt;Schachverein Beispielstadt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Haben Sie einen Linkvorschlag? Kontaktieren Sie uns!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vereinsmeisterschaft 2026</title>
+      <link>http://localhost:50767/turniere/vereinsmeisterschaft/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/turniere/vereinsmeisterschaft/</guid>
+      <description>&lt;h1 id=&#34;vereinsmeisterschaft-2026&#34;&gt;Vereinsmeisterschaft 2026&lt;/h1&gt;
+&lt;p&gt;Die diesjährige Vereinsmeisterschaft ist in vollem Gange! Hier finden Sie alle Informationen zu den aktuellen Ergebnissen und dem Turnierverlauf.&lt;/p&gt;
+&lt;h2 id=&#34;aktuelle-tabelle&#34;&gt;Aktuelle Tabelle&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Platz&lt;/th&gt;
+          &lt;th&gt;Spieler&lt;/th&gt;
+          &lt;th&gt;Punkte&lt;/th&gt;
+          &lt;th&gt;Siege&lt;/th&gt;
+          &lt;th&gt;Remis&lt;/th&gt;
+          &lt;th&gt;Niederlagen&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;Max Mustermann&lt;/td&gt;
+          &lt;td&gt;4.5&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;Anna Beispiel&lt;/td&gt;
+          &lt;td&gt;4.0&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;Peter Probe&lt;/td&gt;
+          &lt;td&gt;3.5&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;Lisa Test&lt;/td&gt;
+          &lt;td&gt;3.0&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;nächste-runde&#34;&gt;Nächste Runde&lt;/h2&gt;
+&lt;p&gt;Die nächste Runde findet am 22. März 2026 statt. Paarungen werden rechtzeitig bekannt gegeben.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

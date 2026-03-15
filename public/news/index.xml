@@ -1,15 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>News on Schachclub Musterstadt</title>
-        <link>http://localhost:1313/news/</link>
-        <description>Recent content in News on Schachclub Musterstadt</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>de-de</language>
-        <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/news/index.xml" rel="self" type="application/rss+xml" /><item>
-            <title>Erstes Training 2026</title>
-            <link>http://localhost:1313/news/erstes-training/</link>
-            <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-            <guid>http://localhost:1313/news/erstes-training/</guid>
-            <description>&lt;p&gt;Heute fand unser erstes Training im neuen Jahr statt.&#xA;Viele spannende Partien!&lt;/p&gt;&#xA;</description>
-        </item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>News on Schachclub Musterstadt</title>
+    <link>http://localhost:50767/news/</link>
+    <description>Recent content in News on Schachclub Musterstadt</description>
+    <generator>Hugo</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:50767/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Erstes Training 2026</title>
+      <link>http://localhost:50767/news/erstes-training/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:50767/news/erstes-training/</guid>
+      <description>&lt;p&gt;Heute fand unser erstes Training im neuen Jahr statt.
+Viele spannende Partien!&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

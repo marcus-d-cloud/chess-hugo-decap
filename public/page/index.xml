@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pages on Schachclub Musterstadt</title>
+    <link>http://localhost:64447/chess-club/page/</link>
+    <description>Recent content in Pages on Schachclub Musterstadt</description>
+    <generator>Hugo</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:64447/chess-club/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nützliche Links</title>
+      <link>http://localhost:64447/chess-club/page/links/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:64447/chess-club/page/links/</guid>
+      <description>&lt;h1 id=&#34;nützliche-links&#34;&gt;Nützliche Links&lt;/h1&gt;
+&lt;p&gt;Hier finden Sie eine Sammlung von nützlichen Links für Schachspieler und Interessierte.&lt;/p&gt;
+&lt;h2 id=&#34;deutsche-schachverbände&#34;&gt;Deutsche Schachverbände&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachbund.de&#34;&gt;Deutscher Schachbund (DSB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachverband-niedersachsen.de&#34;&gt;Schachverband Niedersachsen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;online-schach&#34;&gt;Online-Schach&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.chess.com&#34;&gt;Chess.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lichess.org&#34;&gt;Lichess.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chess24.com&#34;&gt;Chess24&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;schachsoftware&#34;&gt;Schachsoftware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.chessbase.com&#34;&gt;ChessBase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stockfishchess.org&#34;&gt;Stockfish&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lokale-clubs&#34;&gt;Lokale Clubs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachclub-nachbarstadt.de&#34;&gt;Schachclub Nachbarstadt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.schachverein-beispielstadt.de&#34;&gt;Schachverein Beispielstadt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Haben Sie einen Linkvorschlag? Kontaktieren Sie uns!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

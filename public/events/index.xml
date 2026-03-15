@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Events on Schachclub Musterstadt</title>
+    <link>http://localhost:60663/chess-club/events/</link>
+    <description>Recent content in Events on Schachclub Musterstadt</description>
+    <generator>Hugo</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:60663/chess-club/events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ligaspiel gegen Nachbarstadt</title>
+      <link>http://localhost:60663/chess-club/events/2026-04-05-ligaspiel/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60663/chess-club/events/2026-04-05-ligaspiel/</guid>
+      <description>&lt;h2 id=&#34;ligaspiel-gegen-schachclub-nachbarstadt&#34;&gt;Ligaspiel gegen Schachclub Nachbarstadt&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Nachbarstadt&lt;br&gt;
+&lt;strong&gt;Adresse:&lt;/strong&gt; Schachstraße 12, 12345 Nachbarstadt&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 19:30 Uhr&lt;/p&gt;
+&lt;p&gt;Wir freuen uns auf ein spannendes Match!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Training für Anfänger</title>
+      <link>http://localhost:60663/chess-club/events/2026-03-29-anfangertraining/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60663/chess-club/events/2026-03-29-anfangertraining/</guid>
+      <description>&lt;h2 id=&#34;training-für-anfänger&#34;&gt;Training für Anfänger&lt;/h2&gt;
+&lt;p&gt;Für alle, die neu im Schach sind oder ihre Grundlagen auffrischen möchten.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;br&gt;
+&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 18:00 Uhr&lt;/p&gt;
+&lt;p&gt;Bitte bringt ein eigenes Schachbrett mit, falls vorhanden.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vereinsmeisterschaft Runde 4</title>
+      <link>http://localhost:60663/chess-club/events/2026-03-22-vereinsmeisterschaft-runde-4/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60663/chess-club/events/2026-03-22-vereinsmeisterschaft-runde-4/</guid>
+      <description>&lt;h2 id=&#34;vereinsmeisterschaft-runde-4&#34;&gt;Vereinsmeisterschaft Runde 4&lt;/h2&gt;
+&lt;p&gt;Die vierte Runde der Vereinsmeisterschaft findet statt.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;br&gt;
+&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 19:00 Uhr&lt;/p&gt;
+&lt;p&gt;Viel Erfolg an alle Teilnehmer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beispielveranstaltung morgen</title>
+      <link>http://localhost:60663/chess-club/events/2026-03-16-beispielveranstaltung-morgen/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:60663/chess-club/events/2026-03-16-beispielveranstaltung-morgen/</guid>
+      <description>&lt;h2 id=&#34;beispielveranstaltung-für-morgen&#34;&gt;Beispielveranstaltung für morgen&lt;/h2&gt;
+&lt;p&gt;Dies ist ein Beispiel für eine Veranstaltung, die morgen stattfindet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Datum:&lt;/strong&gt; 16. März 2026&lt;br&gt;
+&lt;strong&gt;Uhrzeit:&lt;/strong&gt; 19:00 Uhr&lt;br&gt;
+&lt;strong&gt;Ort:&lt;/strong&gt; Clubhaus Musterstadt&lt;/p&gt;
+&lt;p&gt;Weitere Details folgen bald!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:60663/chess-club/events/2026-03-15-test/</link>
+      <pubDate>Sun, 15 Mar 2026 15:01:00 +0100</pubDate>
+      <guid>http://localhost:60663/chess-club/events/2026-03-15-test/</guid>
+      <description>&lt;p&gt;adasdasd&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

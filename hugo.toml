@@ -1,10 +1,59 @@
-baseURL = "http://localhost"
+baseURL = "https://username.github.io/chess-club/"
 languageCode = "de-de"
 title = "Schachclub Musterstadt"
-theme = "stack"
+theme = "PaperMod"
+publishFuture = true
+buildFuture = true
 
-[params.sidebar]
-subtitle = "Schachclub Musterstadt"
+[params]
+  # PaperMod theme parameters
+  author = "Schachclub Musterstadt"
+  description = "Offizielle Website des Schachclubs Musterstadt"
+  DateFormat = "2006-01-02"
+  defaultTheme = "auto"
 
-[params.article]
-headingAnchor = false
+  [params.profileMode]
+    enabled = false
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Startseite"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "news"
+    name = "News"
+    url = "/news"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "tournaments"
+    name = "Turniere"
+    url = "/turniere"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "calendar"
+    name = "Termine"
+    url = "/events"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "links"
+    name = "Links"
+    url = "/page/links"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "members"
+    name = "Mitglieder"
+    url = "/members"
+    weight = 60
+
+  [[menu.main]]
+    identifier = "impressum"
+    name = "Impressum"
+    url = "/impressum"
+    weight = 70

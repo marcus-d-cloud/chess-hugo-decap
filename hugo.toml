@@ -1,0 +1,10 @@
+baseURL = "http://localhost"
+languageCode = "de-de"
+title = "Schachclub Musterstadt"
+theme = "stack"
+
+[params.sidebar]
+subtitle = "Schachclub Musterstadt"
+
+[params.article]
+headingAnchor = false

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Turnieres on Schachclub Musterstadt</title>
+        <link>http://localhost:1313/turniere/</link>
+        <description>Recent content in Turnieres on Schachclub Musterstadt</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>de-de</language>
+        <lastBuildDate>Sun, 15 Mar 2026 10:02:33 +0100</lastBuildDate><atom:link href="http://localhost:1313/turniere/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Vereinsmeisterschaft</title>
+            <link>http://localhost:1313/turniere/vereinsmeisterschaft/</link>
+            <pubDate>Sun, 15 Mar 2026 10:02:33 +0100</pubDate>
+            <guid>http://localhost:1313/turniere/vereinsmeisterschaft/</guid>
+            <description></description>
+        </item></channel>
+</rss>

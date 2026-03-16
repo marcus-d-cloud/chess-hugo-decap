@@ -5,7 +5,7 @@ backend:
   auth_scope: repo
   base_url: https://marcus-d-cloud.github.io
   site_domain: marcus-d-cloud.github.io
-  client_id: <your-github-oauth-client-id>
+  client_id: Iv23liOJNzWGfgvRRY8t
 
 media_folder: "static/images"
 public_folder: "/images"

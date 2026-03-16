@@ -1,0 +1,96 @@
+{{- define "main" }}
+{{- $legal := .Params.impressum -}}
+
+<article class="post-single impressum-single">
+  <header class="post-header impressum-header">
+    <p class="impressum-kicker">Rechtliche Angaben</p>
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description impressum-description">{{ .Description }}</div>
+    {{- end }}
+
+    <div class="impressum-chip-row" aria-label="Schnellzugriff">
+      {{- with $legal.email }}
+      <a class="impressum-chip" href="mailto:{{ . }}">{{ . }}</a>
+      {{- end }}
+      {{- with $legal.phone }}
+      <a class="impressum-chip" href="tel:{{ replace . " " "" }}">{{ . }}</a>
+      {{- end }}
+      {{- with $legal.registerNumber }}
+      <span class="impressum-chip">Vereinsregister {{ . }}</span>
+      {{- end }}
+    </div>
+  </header>
+
+  <section class="impressum-grid" aria-label="Impressum Übersicht">
+    <section class="impressum-card impressum-card--primary">
+      <p class="impressum-card-label">Angaben gemäß § 5 TMG</p>
+      <h2>Vereinssitz</h2>
+      <p>
+        {{- with $legal.association }}{{ . }}<br>{{ end -}}
+        {{- with $legal.street }}{{ . }}<br>{{ end -}}
+        {{- with $legal.postalCity }}{{ . }}{{ end -}}
+      </p>
+    </section>
+
+    <section class="impressum-card">
+      <p class="impressum-card-label">Vertretungsberechtigt</p>
+      <h2>Vorstand</h2>
+      {{- with $legal.board }}
+      <ul class="impressum-list">
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </section>
+
+    <section class="impressum-card">
+      <p class="impressum-card-label">Direkter Kontakt</p>
+      <h2>Kontakt</h2>
+      <dl class="impressum-meta">
+        {{- with $legal.phone }}
+        <div>
+          <dt>Telefon</dt>
+          <dd><a href="tel:{{ replace . " " "" }}">{{ . }}</a></dd>
+        </div>
+        {{- end }}
+        {{- with $legal.email }}
+        <div>
+          <dt>E-Mail</dt>
+          <dd><a href="mailto:{{ . }}">{{ . }}</a></dd>
+        </div>
+        {{- end }}
+      </dl>
+    </section>
+
+    <section class="impressum-card">
+      <p class="impressum-card-label">Eintragung</p>
+      <h2>Registereintrag</h2>
+      <dl class="impressum-meta">
+        {{- with $legal.registerCourt }}
+        <div>
+          <dt>Registergericht</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{- end }}
+        {{- with $legal.registerNumber }}
+        <div>
+          <dt>Registernummer</dt>
+          <dd>{{ . }}</dd>
+        </div>
+        {{- end }}
+      </dl>
+    </section>
+  </section>
+
+  {{- if .Content }}
+  <div class="post-content impressum-legal-copy">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+</article>
+
+{{- end }}

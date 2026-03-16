@@ -1,4 +1,4 @@
-baseURL = "https://username.github.io/chess-club/"
+baseURL = "https://marcus-d-cloud.github.io/chess-pages/"
 languageCode = "de-de"
 title = "Schachclub Musterstadt"
 theme = "PaperMod"
@@ -26,29 +26,29 @@ buildFuture = true
   [[menu.main]]
     identifier = "news"
     name = "News"
-    url = "/news"
+    url = "/news/"
     weight = 20
 
   [[menu.main]]
     identifier = "tournaments"
     name = "Turniere"
-    url = "/turniere"
+    url = "/turniere/"
     weight = 30
 
   [[menu.main]]
     identifier = "calendar"
     name = "Kalender"
-    url = "/calendar"
+    url = "/calendar/"
     weight = 40
 
   [[menu.main]]
     identifier = "links"
     name = "Links"
-    url = "/page/links"
+    url = "/page/links/"
     weight = 50
 
   [[menu.main]]
     identifier = "impressum"
     name = "Impressum"
-    url = "/impressum"
+    url = "/impressum/"
     weight = 70
